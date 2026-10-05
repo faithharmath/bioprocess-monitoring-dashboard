@@ -16,7 +16,7 @@ class Batch:
         print(f"Batch ID: {self.batch_id:4d} | "
               f"Optimal pH: {self.ph_opt:4.1f} | "
               f"Optimal Temperature: {self.temperature_opt:4.1f} C")
-## new below
+
 class BioprocessMonitor:
     def __init__(self, filepath, ph_lims, temperature_lims):
         self.filepath = filepath
@@ -91,8 +91,8 @@ class BioprocessMonitor:
 
         ## Dissolved Oxygen vs Time
         ax_DO=axes[1, 1]
-        ax_DO.scatter(df_batch["time_h"], df_batch["DO_percent"], color="pink", marker="o")
-        ax_ph.set_title("Dissolved Oxygen vs Time")
+        ax_DO.scatter(df_batch["time_h"], df_batch["DO_percent"], color="navy", marker="o")
+        ax_DO.set_title("Dissolved Oxygen vs Time")
         ax_DO.set_xlabel("Time (h)")
         ax_DO.set_ylabel("Dissolved Oxygen (%)")
         ax_DO.grid(True, alpha=0.5)
